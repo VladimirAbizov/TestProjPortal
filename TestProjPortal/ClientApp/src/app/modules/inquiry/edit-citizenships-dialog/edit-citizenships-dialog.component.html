@@ -1,0 +1,7 @@
+<div *ngIf="data.$person | async as pers">
+  <h1 mat-dialog-title>Гражданства и адреса</h1>
+  <div mat-dialog-content>
+      <app-edit-citizenships [model]="pers" [personType]="data.personType" [applicantType]="data.applicantType"></app-edit-citizenships>
+  </div>
+  <app-dialog-buttons [config]="config" [isValid]="isValid()"></app-dialog-buttons>
+</div>
